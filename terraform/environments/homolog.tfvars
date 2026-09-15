@@ -1,0 +1,3 @@
+project_id = "pos-fiap-2026"
+region = "us-east1"
+environment = "homolog"
