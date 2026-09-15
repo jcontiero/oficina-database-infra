@@ -1,4 +1,7 @@
 # Oficina Mecânica - Infraestrutura de Banco de Dados
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=jcontiero_oficina-database-infra)](https://sonarcloud.io/summary/new_code?id=jcontiero_oficina-database-infra)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=jcontiero_oficina-database-infra&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=jcontiero_oficina-database-infra)
+
 
 ## Propósito
 Gerenciar e provisionar o banco de dados principal do sistema em modalidade "Gerenciada", garantindo isolamento de VPC, Backups Automáticos e armazenamento das credenciais com segurança.
