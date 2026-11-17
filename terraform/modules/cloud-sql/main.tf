@@ -1,12 +1,3 @@
-resource "random_password" "db_password" {
-  length  = 24
-  special = false
-}
-
-data "google_compute_network" "vpc" {
-  name = var.vpc_network_name
-}
-
 resource "google_sql_database_instance" "postgres" {
   name             = var.instance_name
   database_version = var.db_version
@@ -21,7 +12,7 @@ resource "google_sql_database_instance" "postgres" {
 
     ip_configuration {
       ipv4_enabled                                  = false
-      private_network                               = data.google_compute_network.vpc.id
+      private_network                               = var.vpc_network_id
       enable_private_path_for_google_cloud_services = true
     }
 
@@ -53,25 +44,4 @@ resource "google_sql_database_instance" "postgres" {
   }
 
   deletion_protection = false # Permitir gerenciar via Terraform no desafio
-}
-
-resource "google_sql_database" "db_homolog" {
-  name     = "oficina_homolog"
-  instance = google_sql_database_instance.postgres.name
-}
-
-resource "google_sql_database" "db_prod" {
-  name     = "oficina_prod"
-  instance = google_sql_database_instance.postgres.name
-}
-
-resource "google_sql_database" "db_default" {
-  name     = "oficina"
-  instance = google_sql_database_instance.postgres.name
-}
-
-resource "google_sql_user" "app_user" {
-  name     = "oficina_user"
-  instance = google_sql_database_instance.postgres.name
-  password = random_password.db_password.result
 }
