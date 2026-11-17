@@ -12,13 +12,3 @@ output "cloud_sql_connection_name" {
   value       = module.cloud_sql.connection_name
   description = "Connection Name da instancia GCP"
 }
-
-output "secret_manager_homolog_key" {
-  value       = module.secrets.secret_id_homolog
-  description = "Secret Name para URL de conexao homologacao"
-}
-
-output "secret_manager_prod_key" {
-  value       = module.secrets.secret_id_prod
-  description = "Secret Name para URL de conexao producao"
-}

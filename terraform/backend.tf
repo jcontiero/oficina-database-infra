@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "pos-fiap-2026-tf-state"
-    prefix = "env/shared/database-infra"
+    bucket = "fiap-project-514922-tfstate"
+    prefix = "platform/cloudsql"
   }
 }
