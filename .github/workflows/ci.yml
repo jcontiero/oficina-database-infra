@@ -2,9 +2,9 @@ name: Terraform CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "homolog" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "homolog" ]
 
 jobs:
   validate:

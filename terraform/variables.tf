@@ -7,7 +7,13 @@ variable "project_id" {
 variable "region" {
   type        = string
   description = "Região GCP"
-  default     = "us-central1"
+  default     = "us-east1"
+}
+
+variable "environment" {
+  type        = string
+  description = "Identificador do escopo de configuração (shared/prod/homolog)"
+  default     = "prod"
 }
 
 variable "instance_name" {
