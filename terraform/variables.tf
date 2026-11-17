@@ -1,13 +1,19 @@
 variable "project_id" {
   type        = string
   description = "GCP Project ID"
-  default     = "pos-fiap-2026"
+  default     = "fiap-project-514922"
 }
 
 variable "region" {
   type        = string
   description = "Região GCP"
-  default     = "us-central1"
+  default     = "us-east1"
+}
+
+variable "environment" {
+  type        = string
+  description = "Identificador do escopo de configuração (shared/prod/homolog)"
+  default     = "prod"
 }
 
 variable "instance_name" {
