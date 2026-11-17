@@ -25,7 +25,7 @@ Este repositório gerencia a instância compartilhada de banco de dados relacion
 
 | Variável | Default | Descrição |
 | :--- | :--- | :--- |
-| `project_id` | `pos-fiap-2026` | ID do projeto GCP |
+| `project_id` | `fiap-project-514922` | ID do projeto GCP (Project Number `936717667971`) |
 | `region` | `us-east1` | Região da instância Cloud SQL |
 | `instance_name` | `oficina-postgres-db` | Nome da instância Cloud SQL |
 | `db_version` | `POSTGRES_16` | Versão do PostgreSQL |
